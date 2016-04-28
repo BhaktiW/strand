@@ -1,6 +1,6 @@
 {
   "name": "strand",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "MediaMath UI-Framework based on polymer.js",
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
     "start": "gulp live",
     "dist": "gulp build:dist",
     "release": "gulp release:patch",
+    "mm2strand-files": "(cd srcOriginal || cp -r src srcOriginal) && npm install renamer && renamer --find 'mm-' --replace 'strand-' src/**/* src/**",
+    "mm2strand-text": "(cd srcOriginal || cp -r src srcOriginal) && npm install replace && replace 'mm-' 'strand-' gulp src -r --exclude=**/mm-**",
     "bower": "bower"
   },
   "devDependencies": {
